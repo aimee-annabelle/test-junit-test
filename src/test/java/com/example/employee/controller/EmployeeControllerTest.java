@@ -91,9 +91,9 @@ public class EmployeeControllerTest {
 
     @Test
     public void updateEmployee_success() throws Exception {
-        EmployeeDTO employeeDTO = new EmployeeDTO(2,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07));
+        EmployeeDTO employeeDTO = new EmployeeDTO(2,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07));
         when(employeeService.updateEmployee(employeeDTO))
-                .thenReturn(new Employee(2,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07)));
+                .thenReturn(new Employee(2,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07)));
 
         MockHttpServletRequestBuilder requestBuilder = MockMvcRequestBuilders.put("/api/employee/2")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -107,7 +107,7 @@ public class EmployeeControllerTest {
 
     @Test
     public void updateEmployee_failure() throws Exception {
-        EmployeeDTO employeeDTO = new EmployeeDTO(1,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07));
+        EmployeeDTO employeeDTO = new EmployeeDTO(1,"ella","kim","0785566444",348.6f,"female",new Date(2004-05-07));
 
         when(employeeService.updateEmployee(employeeDTO))
                 .thenReturn(null);

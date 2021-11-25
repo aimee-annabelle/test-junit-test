@@ -36,7 +36,7 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void save(){
-        employeeRepository.save(new Employee(12,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07)));
+        employeeRepository.save(new Employee(1,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07)));
         assertThat(employeeRepository.count()).isEqualTo(2);
     }
 
@@ -48,7 +48,7 @@ public class EmployeeRepositoryTest {
 
     @Test
     public void update(){
-        employeeRepository.save(new Employee(200,"Waze","Common","0785566432",34.6f,"Male",new Date(2004-05-07)));
+        employeeRepository.save(new Employee(200,"lilly","laris","0785566478",355.7f,"female",new Date(2004-07-07)));
         assertThat(employeeRepository.count()).isEqualTo(1);
     }
 }

@@ -26,16 +26,16 @@ public class EmployeeServiceTest {
     @Test
     public void getAllEmployee_withSomeElement(){
         when(employeeRepository.findAll()).thenReturn(Arrays.asList(
-                new Employee(2,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07)),
-                new Employee(2,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07))));
+                new Employee(2,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07)),
+                new Employee(2,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07))));
 
         assertEquals(2,employeeService.getAll().size());
     }
 
     @Test
     public void saveEmployee_withSomeElement(){
-        Employee employee = new Employee (2,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07));
-        EmployeeDTO employeeDTO = new EmployeeDTO (2,"Ernest","Tzarina","0785566432",34.6f,"Male",new Date(2004-05-07));
+        Employee employee = new Employee (2,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07));
+        EmployeeDTO employeeDTO = new EmployeeDTO (2,"ella","kim","0785566444",348.6f,"female",new Date(2003-07-07));
 
         when(employeeRepository.save(employee)).thenReturn(employee);
 
